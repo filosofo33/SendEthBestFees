@@ -11,7 +11,7 @@ const providerweb3 ="https://eth-mainnet.g.alchemy.com/v2/"//'https://mainnet.in
 const privateKey = '';//set your private key
 const contractAddress = '';//erc20 token contract, empty means eth
 var amountInWeis = -1;// amount to transfer, -1 means that all eth will be out, fees are reduced later
-const target = '';// target is address to send funds. some tokens fail because they have 0x0 blocked, use 0x0000000000000000000000000000000000000001 instead (error sometimes is "Unable to locate corresponding Transfer Event Logs)")
+const target = '';// target is address to send funds. if you want to burn spam tokens take care, also some tokens fail because they have 0x0 blocked, use 0x0000000000000000000000000000000000000001 instead (error sometimes is "Unable to locate corresponding Transfer Event Logs)")
 const tipicalGasUsedByContractAndLimit = 21000//21000//GasLimit
 
 var tippriority = -1;//-1 get tip estimation from alchemy. 1000000000 1gwei, tip to miner, this is key, try to set it low but high enough to enter at next block for emptying eth wallet, (will be sum to actual base)
