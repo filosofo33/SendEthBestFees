@@ -72,8 +72,12 @@ console.log("!!!!!!!!!!!!!!next block.baseFeePerGas in actual usage calculation!
 var usage = ((((txpending/txlast))*2*0.125)-0.125)+1//negative rate under 50% block ocuppy. add 1 bc (is not real negative obsly, it is a %)
 if(usage>1.125)usage=1.125
 if(usage<0.875)usage=0.875
-//for max gas fees adjust to the min thresold
+    
+//for emptying all eth dust, set this max gas fees adjust , to achieve it, maybe you have to try it several times, and get a perfect slow down block
 //if(usage>1)usage=1
+//if(usage<1)usage=0.875
+//set to the min threshold
+
 console.log(actualbase*usage)
 actualbase=Math.ceil(actualbase*usage)
 console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
