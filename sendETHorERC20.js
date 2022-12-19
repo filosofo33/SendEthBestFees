@@ -73,9 +73,8 @@ var usage = ((((txpending/txlast))*2*0.125)-0.125)+1//negative rate under 50% bl
 if(usage>1.125)usage=1.125
 if(usage<0.875)usage=0.875
     
-//for emptying all eth dust, set this max gas fees adjust , to achieve it, maybe you have to try it several times, and get a perfect slow down block
-//if(usage>1)usage=1
-//if(usage<1)usage=0.875
+//for emptying all eth dust, set this max gas fees settings. when a slow down block is coming you will have a perfect get in
+if(contractAddress=="" and amountInWeis==-1)usage=0.875
 //set to the min threshold
 
 console.log(actualbase*usage)
